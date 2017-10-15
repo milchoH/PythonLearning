@@ -5,9 +5,9 @@ import operator
 def start(url):
     word_list = []
     source_code = requests.get(url).text
-    soup = BeautifulSoup(source_code)
-    for post_text in soup.findAll('a', {'class': 'index_singleListingTitles'}):
-        content = post_text.string
+    soup = BeautifulSoup(source_code, "html.parser")
+    for post_text in soup.findAll('div', {'class': 'new_prod_box'}):
+        content = post_text.get_text()
         words = content.lower().split()
         for each_word in words:
             word_list.append(each_word)
