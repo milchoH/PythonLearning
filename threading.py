@@ -1,9 +1,9 @@
-import threading
+import TestThreads
 
-class sendMessage(threading.Thread):
+class sendMessage(TestThreads.Thread):
     def run(self):
         for _ in range(10):
-            print(threading.currentThread().getName())
+            print(TestThreads.currentThread().getName())
 
 x = sendMessage(name = 'Send message')
 y = sendMessage(name = 'Receive message')
