@@ -39,6 +39,7 @@ class Deck:
         if self.count() < 52:
             raise ValueError("Only ")
         shuffle(self.cards)
+        return self
 
 d = Deck()
 print(d._deal(52))
