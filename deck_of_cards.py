@@ -1,3 +1,4 @@
+from random import shuffle
 class Card:
     def __init__(self, value, suit):
         self.value = value
@@ -33,6 +34,11 @@ class Deck:
 
     def deal_hand(self,hand_size):
         return self._deal(hand_size)
+
+    def shuffle(self):
+        if self.count() < 52:
+            raise ValueError("Only ")
+        shuffle(self.cards)
 
 d = Deck()
 print(d._deal(52))
