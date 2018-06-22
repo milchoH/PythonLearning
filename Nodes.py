@@ -70,10 +70,11 @@ class LinkedList(object):
             print(actualNode.data)
             actualNode = actualNode.nextNode
 
+
 linkedlist = LinkedList()
 
 linkedlist.insert_start(12)
-linkedlist.insert_start(122)
+linkedlist.insert_end(122)
 linkedlist.insert_start(3)
 linkedlist.insert_end(31)
 

@@ -7,8 +7,8 @@ BASE_URL = "http://quotes.toscrape.com"
 
 
 def read_quotes(filename):
-    with open(filename,"r") as file:
-        csv_reader= DictReader(file)
+    with open(filename, "r") as file:
+        csv_reader = DictReader(file)
         return list(csv_reader)
 
 
@@ -20,7 +20,7 @@ def start_game(quotes):
     print(quote["author"])
     guess = ''
     while guess.lower() != quote["author"].lower() and remaining_guesses > 0:
-        guess = input(f"Who said this quote? Guesses remainig: {remaining_guesses}")
+        guess = input(f"Who said this quote? Guesses remaining: {remaining_guesses}")
         if guess.upper() == quote["author"].upper():
             print("NICEEEE")
             break
